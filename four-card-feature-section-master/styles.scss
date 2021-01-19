@@ -1,0 +1,134 @@
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+$VeryDarkBlue: hsl(234, 12%, 34%);
+$GrayishBlue: hsl(229, 6%, 66%);
+$VeryLightGray: hsl(0, 0%, 98%);
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+$font: "Poppins", sans-serif;
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: $VeryLightGray;
+	font-family: $font;
+	font-size: 15px;
+}
+
+.info {
+	width: 340px;
+	margin: 0 auto;
+}
+
+.info > div:not(:first-of-type) {
+	background-color: white;
+	box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+	border: 3px solid transparent;
+	transition: all 0.3s ease-in;
+
+	&:nth-child(2) {
+		border-top: 3px solid $Cyan;
+
+		&:hover {
+			border: 3px solid $Cyan;
+		}
+	}
+
+	&:nth-child(3) {
+		border-top: 3px solid $Red;
+		&:hover {
+			border: 3px solid $Red;
+		}
+	}
+
+	&:nth-child(4) {
+		border-top: 3px solid $Orange;
+		&:hover {
+			border: 3px solid $Orange;
+		}
+	}
+
+	&:nth-child(5) {
+		border-top: 3px solid $Blue;
+		&:hover {
+			border: 3px solid $Blue;
+		}
+	}
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+.info > div {
+	margin: 2em 0;
+	width: 100%;
+}
+
+.intro {
+	text-align: center;
+}
+
+.intro {
+	padding: 0.25em;
+
+	&__title,
+	&__sub {
+		font-size: 1.5rem;
+	}
+
+	&__title {
+		font-weight: 300;
+		color: $GrayishBlue;
+	}
+
+	&__sub {
+		font-weight: 600;
+		color: $VeryDarkBlue;
+	}
+
+	&__para {
+		color: $GrayishBlue;
+		width: 90%;
+		margin: 15px auto;
+	}
+}
+
+.card {
+	border-radius: 5px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	padding: 1.2em 1.5em;
+
+	&__top {
+		grid-column: 1/3;
+	}
+
+	&__img {
+		grid-column: 2/3;
+		align-self: center;
+		justify-self: end;
+		margin-bottom: -15px;
+		width: 70px;
+		height: 70px;
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: 1.3rem;
+		color: $VeryDarkBlue;
+	}
+
+	&__para {
+		color: $GrayishBlue;
+		font-weight: 200;
+		margin: 5px 0 20px 0;
+	}
+}
