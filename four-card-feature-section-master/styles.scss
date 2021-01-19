@@ -31,7 +31,7 @@ body {
 	background-color: white;
 	box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
 	border: 3px solid transparent;
-	transition: all 0.3s ease-in, transform 0.3s ease-in;
+	transition: border 0.3s ease-in, transform 0.3s ease-in;
 
 	&:nth-child(2) {
 		border-top: 3px solid $Cyan;
