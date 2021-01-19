@@ -22,8 +22,10 @@ body {
   -webkit-box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
   border: 3px solid transparent;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  transition: all 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  transition: all 0.3s ease-in, transform 0.3s ease-in;
+  transition: all 0.3s ease-in, transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
 }
 
 .info > div:not(:first-of-type):nth-child(2) {
